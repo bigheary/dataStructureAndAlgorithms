@@ -7,7 +7,7 @@ public class CreateBinaryTree {
 			return null;
 		}
 		String charAtRoot = s1.substring(0, 1);
-		int index = s2.indexOf(charAtRoot);
+		int index = s2.lastIndexOf(charAtRoot);
 		String s11 = s1.substring(1, index+1);
 		String s12 = s1.substring(index + 1, s1.length());
 		String s21 = s2.substring(0, index);
@@ -18,8 +18,8 @@ public class CreateBinaryTree {
 	}
 	
 	public static void main(String[] args){
-		String s1 = "abdcef";
-		String s2 = "fecdba";
+		String s1 = "aadbcbef";
+		String s2 = "daacbebf";
 		BNode root = createTree(s1, s2);
 		
 		//visit
