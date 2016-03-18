@@ -1,7 +1,7 @@
 package binaryTree;
 
 public class CreateBinaryTree {
-	
+	// 递归地构造树
 	public static BNode createTree(String s1, String s2) {
 		if (s1.equals("") && s2.equals("")) {
 			return null;
@@ -18,8 +18,8 @@ public class CreateBinaryTree {
 	}
 	
 	public static void main(String[] args){
-		String s1 = "aadbcbef";
-		String s2 = "daacbebf";
+		String s1 = "adbcef";
+		String s2 = "dbaecf";
 		BNode root = createTree(s1, s2);
 		
 		//visit
