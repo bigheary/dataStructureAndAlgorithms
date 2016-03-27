@@ -8,20 +8,21 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Stack;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 
 
 class Diagraph {
 	private final int V;
 	private int E;
-	private LinkedList<Integer>[] adj;
+	private TreeSet<Integer>[] adj;
 	
 	public Diagraph(int V){
 		this.V = V;
 		this.E = 0;
-		adj = (LinkedList<Integer>[])new LinkedList[V];
+		adj = (TreeSet<Integer>[])new TreeSet[V];//维护一个有序
 		for(int v = 0; v < V; v++){
-			adj[v] = new LinkedList<>();
+			adj[v] = new TreeSet<>();
 		}
 	}
 	
@@ -146,14 +147,15 @@ class Topological {
 
 public class Solution {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 		// TODO Auto-generated method stub
         BufferedReader stdin = new BufferedReader(
         		new InputStreamReader(System.in));
+        
         String T;
         T = stdin.readLine();
         for (int t = 0; t < Integer.parseInt(T); t++) {
-			String N = stdin.readLine();
+			String N = stdin.readLine();//N个节点
 			LinkedList<String> lineInfo = new LinkedList<>();
 			Diagraph G = new Diagraph(Integer.parseInt(N));
 			LinkedList<String> filename = new LinkedList<>();
@@ -182,12 +184,14 @@ public class Solution {
 			
 			//建图
 			for(int n = 0; n < Integer.parseInt(N); n++){
-				Iterator<String, >
-				G.addEdge(v, w);
+				//Iterator<String, >
+				//G.addEdge(v, w);
 			}
 			
-			Topological tpg = new Topological(G);
+			//Topological tpg = new Topological(G);
 			
+			Class cltpg = Class.forName("Topological");
+			Topological tpg = (Topological)cltpg.newInstance();
 			if(tpg.order() == null){
 				System.out.println("ERROR");
 				System.out.println();
