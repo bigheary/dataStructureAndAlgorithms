@@ -2,6 +2,8 @@ package binaryTree;
 
 import java.util.ArrayList;
 
+import xxd.utils.datastructure.BNode;
+
 public class VisitNodeByLevel {
 	
 	//递归地打印二叉树level层的节点

@@ -3,7 +3,7 @@ package javaIO;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+import javaIO.StdIOUtils;
 /***************
  * 这是一个作为OJ常用的IO以及类型转换工具
  * @author xxd
@@ -29,6 +29,7 @@ public class StdIOUtils {
         BufferedReader stdin = new BufferedReader(
         		new InputStreamReader(System.in));
         String s = stdin.readLine();
+        
 	}
 
 }

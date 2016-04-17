@@ -2,6 +2,8 @@ package binaryTree;
 
 import java.util.Stack;
 
+import xxd.utils.datastructure.BNode;
+
 public class BNodeProcessorSecondTime {
 	//错误的版本
 	public static void binaryTreeVisitLnrErr(BNode root){

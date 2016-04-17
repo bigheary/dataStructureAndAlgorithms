@@ -2,6 +2,8 @@ package binaryTree;
 
 import java.util.Stack;
 
+import xxd.utils.datastructure.BNode;
+
 public class BNodeProcessor {
     private static BNode a,b,c,d,e,f,g,h,i;
     

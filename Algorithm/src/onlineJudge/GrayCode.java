@@ -19,6 +19,22 @@ public class GrayCode {
 		return code;
 	}
 	
+	    public String[] getGray(int n) {
+	        // write code here
+	        if(n < 1)
+	            return null;
+	        if(n == 1)
+	            return new String[] {"0","1"};
+	        
+	        String[] subCode = getGray(n-1);
+	        String[] code = new String[subCode.length*2];
+	        for(int i = 0; i < subCode.length; i++){
+	            code[i] = "0" + subCode[i];
+	            code[code.length - i] = "1" + subCode[i];            
+	        }
+	        return code;
+	    }
+	
 	// 非递归实现
 	/*public static String[] grayCodeNonRecursive(int n){
 		return ;
@@ -44,5 +60,6 @@ public class GrayCode {
 		String[] ss = grayCode(1);
 		for(String str: ss)
 			System.out.println(str);
+		new GrayCode().getGray(2);
 	}
 }
