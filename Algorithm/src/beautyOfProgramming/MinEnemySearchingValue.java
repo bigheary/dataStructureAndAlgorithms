@@ -52,7 +52,7 @@ class Graph{
 		this.V = V;
 		adj = (LinkedList<Bag>[])new LinkedList[V];
 		for(int v = 0; v < V; v++)
-			adj[v] = new LinkedList<>();
+			adj[v] = new LinkedList();
 	}
 	
 	public void addEdge(int u, int v, int w){
