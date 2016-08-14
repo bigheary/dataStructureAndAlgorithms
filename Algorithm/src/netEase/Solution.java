@@ -22,7 +22,7 @@ class Diagraph {
 		this.E = 0;
 		adj = (TreeSet<Integer>[])new TreeSet[V];//维护一个有序
 		for(int v = 0; v < V; v++){
-			adj[v] = new TreeSet<>();
+			adj[v] = new TreeSet();
 		}
 	}
 	
@@ -156,19 +156,19 @@ public class Solution {
         T = stdin.readLine();
         for (int t = 0; t < Integer.parseInt(T); t++) {
 			String N = stdin.readLine();//N个节点
-			LinkedList<String> lineInfo = new LinkedList<>();
+			LinkedList<String> lineInfo = new LinkedList();
 			Diagraph G = new Diagraph(Integer.parseInt(N));
-			LinkedList<String> filename = new LinkedList<>();
+			LinkedList<String> filename = new LinkedList();
 			for (int n = 0; n < Integer.parseInt(N); n++) {
 				String line = stdin.readLine();
 				lineInfo.add(line);
 			}
 			
-			TreeMap<String, LinkedList<Integer>> tm = new TreeMap<>();
+			TreeMap<String, LinkedList<Integer>> tm = new TreeMap();
 			for(int n = 0; n < Integer.parseInt(N); n++){
 				String[] params = lineInfo.get(n).split(" ");
 				filename.add(params[0]);
-				LinkedList<Integer> nodeList = new LinkedList<>();
+				LinkedList<Integer> nodeList = new LinkedList();
 				nodeList.add(n);
 				if(params.length > 2){
 					int[] index = new int[params.length - 2];

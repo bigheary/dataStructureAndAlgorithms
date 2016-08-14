@@ -31,8 +31,8 @@ public class VisitNodeByLevel {
 		if (root == null) {
 			return;
 		}
-		ArrayList<BNode> arr = new ArrayList<>();
-		ArrayList<Integer> index = new ArrayList<>();
+		ArrayList<BNode> arr = new ArrayList();
+		ArrayList<Integer> index = new ArrayList();
 		//index.add(0);
 		arr.add(root);
 		int current = 0;

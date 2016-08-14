@@ -48,7 +48,7 @@ public class BNodeProcessor {
     
     //非递归遍历方法
     public static void visitTreeNonRecursiveNlr(BNode root) {
-    	Stack<BNode> s = new Stack<>();
+    	Stack<BNode> s = new Stack();
 		while(null != root || !s.isEmpty()){
 			if(null != root){
 				print(root.getData());
@@ -62,7 +62,7 @@ public class BNodeProcessor {
 	}
     
     public static void visitTreeNonRecursiveLnr(BNode root) {
-    	Stack<BNode> s = new Stack<>();
+    	Stack<BNode> s = new Stack();
 		while(null != root || !s.isEmpty()){
 			if(null != root){
 				s.push(root);
@@ -76,7 +76,7 @@ public class BNodeProcessor {
 	}
     
     public static void visitTreeNonRecursiveLrn(BNode root) {
-    	Stack<BNode> s = new Stack<>();
+    	Stack<BNode> s = new Stack();
     	BNode pre = null;
 		while(null != root || !s.isEmpty()){
 			if(null != root){

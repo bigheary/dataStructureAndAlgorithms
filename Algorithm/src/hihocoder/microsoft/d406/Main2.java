@@ -94,7 +94,7 @@ public class Main2 {
 		int[] tmpdata = solution.lineToInt(br.readLine());
 		int N = tmpdata[0];
 		int M = tmpdata[1];
-		LinkedList<String> rules = new LinkedList<>();		
+		LinkedList<String> rules = new LinkedList();
 		for(int n = 0; n < N; n++){
 			rules.add(br.readLine());
 		}

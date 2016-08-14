@@ -8,7 +8,7 @@ import xxd.utils.datastructure.*;
 public class ListPrintFromTailToHead {
 	
 	public static <T> void printFromTailToHead(LNode<T> head){
-		Stack<LNode<T>> nodes = new Stack<>();
+		Stack<LNode<T>> nodes = new Stack();
 		LNode<T> pnode = head;
 		while(pnode != null){
 			nodes.push(pnode);

@@ -27,13 +27,13 @@ public class Solution {
 	}*/
 	static{
 		linkedsets = new ArrayList<TreeSet<Integer>>();
-		linkedsets.add(new TreeSet<>(Arrays.asList(1, 4)));
-		linkedsets.add(new TreeSet<>(Arrays.asList(1, 2, 3, 7)));
-		linkedsets.add(new TreeSet<>(Arrays.asList(5, 6)));
-		linkedsets.add(new TreeSet<>(Arrays.asList(1, 7, 0)));
-		linkedsets.add(new TreeSet<>(Arrays.asList(1, 3, 4, 5, 7, 9)));
-		linkedsets.add(new TreeSet<>(Arrays.asList(2)));
-		linkedsets.add(new TreeSet<>(Arrays.asList(1, 4, 7)));
+		linkedsets.add(new TreeSet(Arrays.asList(1, 4)));
+		linkedsets.add(new TreeSet(Arrays.asList(1, 2, 3, 7)));
+		linkedsets.add(new TreeSet(Arrays.asList(5, 6)));
+		linkedsets.add(new TreeSet(Arrays.asList(1, 7, 0)));
+		linkedsets.add(new TreeSet(Arrays.asList(1, 3, 4, 5, 7, 9)));
+		linkedsets.add(new TreeSet(Arrays.asList(2)));
+		linkedsets.add(new TreeSet(Arrays.asList(1, 4, 7)));
 	}
 
 	public static String[] splitBySpace(String str){
@@ -77,7 +77,7 @@ public class Solution {
         	for (int k = 0; k < K; k++) {
         		String[] lineStrings = splitBySpace(stdin.readLine().trim());
         		int[] light = strParseInt(lineStrings);
-        		TreeSet<Integer> tmpset = new TreeSet<>();
+        		TreeSet<Integer> tmpset = new TreeSet();
         		tmpset.addAll(Arrays.asList(1,2,3,4,5,6,7,8,9,0));
         		
         		for(int i = 0; i < light.length; i++){
