@@ -64,7 +64,7 @@ public class FindPath {
     }
 
     public static void main(String[] args){
-        x1 = 3;
+        x1 = 4;
         y1 = 2;
         x0 = 0;
         y0 = 0;
